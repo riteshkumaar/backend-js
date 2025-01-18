@@ -6,4 +6,10 @@
 
 * git init -> git respository is now initialised and you are now tracking all files
 * git add . -> adds all the files to repository
-* git commit 
+* git commit -m "add initial files for backend"
+* right now we are in the master branch 
+* Now got to github and create a new repository
+* now come back to terminal here and do ' git branch -M main' 
+* the above command changes the current branch to main -> this is done to match github standards
+* git remote add origin -> which tells the repository where to actually push the files
+* git push -u origin main -> this is the final step
