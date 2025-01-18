@@ -1,0 +1,9 @@
+* terminal - npm init -> npm initialises the repository
+* a json file is now formed 
+
+
+* make a readme.md file 
+
+* git init -> git respository is now initialised and you are now tracking all files
+* git add . -> adds all the files to repository
+* git commit 
