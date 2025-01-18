@@ -4,13 +4,17 @@
   "description": "A backend application using node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
+  "type": "module",
   "keywords": [
     "chai",
     "backend",
     "node"
   ],
   "author": "Ritesh Kumar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }

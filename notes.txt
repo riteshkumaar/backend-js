@@ -13,3 +13,27 @@
 * the above command changes the current branch to main -> this is done to match github standards
 * git remote add origin -> which tells the repository where to actually push the files
 * git push -u origin main -> this is the final step
+
+** in case of any errors, git remote remove origin and then set remote again and then push it 
+
+*now make a public folder and add a temp folder 
+* git status -> it only tracks folders so nothing is visible for now 
+* now make a .gitkeep file inside the temp folder 
+-> now I can track these folders as well
+
+* now move out of public and make a git ignore file then head to gitignore on chrome -> git ignore.io 
+then type node and copy paste that full content in the .gitignore files which will not be pushed
+* the env variables are picked from the system to keep them secure so make a .env file now
+* make another folder src in root
+* touch idx.js -> makes a file in your correct directory as idx.js
+* in package.json set type to module
+
+** now we will use a utility called nodemon which restarts the server everytime we make any changes
+*dev dependencies -> used only during development and not in production
+* npm i -D nodemon
+* go to package.json in scripts, add /*   "dev": "nodemon src/index.js"   */
+* git status
+* git add .
+* git commit -m "setup project files"
+* git push 
+* in src>mkdir controller dB middlewares(to check for anything)
