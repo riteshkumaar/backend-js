@@ -37,3 +37,64 @@ then type node and copy paste that full content in the .gitignore files which wi
 * git commit -m "setup project files"
 * git push 
 * in src>mkdir controller dB middlewares(to check for anything)
+
+now go to the icon on the left below search where you find, changes add them and then commit and push from ...
+* now install -D prettier so that no conflicts arise in git for multiple people
+ * now make a .prettierrc to make it's configurations
+ * inside it 
+ {
+    "singleQuote": false,
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "semi": true,
+    "trailingComma": "es5"
+}
+
+
+*****
+Go to Mongodb and make a cluster
+after that, come to .env -> assign a port let's say 4000 and thereafter 
+add the mongodb url 
+remove the ending slash in url
+
+export your DB using a name and export it in constants.js
+
+
+** We will learn to connect to Database
+-> 3 packages are needed -> dotenv, mongoose and express
+-> install all using -> npm i 
+
+-> mongoose has to be imported now as it is the one to connect to Database
+-> Database should always be wrapped in try-catch or promises
+-> Database is always in another continent hence always takes time -> async await lagana pdega
+
+-> now import mongoose in index.js
+-> uske baad index.js mei jaake async lgao aur usmei bhi try catch laga do 
+import mongoose from "mongoose";
+import { DB_Name } from "./constants";
+(async () => {
+    try {
+        await mongoose.connect(`${process.env.MONGODB_URL}/${DB_Name}`)
+        app.on("error" , (error) => {
+            console.log("Application isn't able to talk to database: ", error);
+            throw error;
+        })
+    app.listen(process.env.PORT, () => 
+    {
+        console.log(`App is listening on ${process.env.PORT}`);
+        
+    })
+    } catch (error) {
+        console.log("Error occured, error");
+        throw error;
+    }
+})
+* -. This is one approach 
+
+
+-> This is another approach
+
+
+-> now go to DB and make an index.js file in it
+-> import mongoose from "mongoose";
+import { DB_Name } from "../constants";
